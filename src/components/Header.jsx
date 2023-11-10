@@ -32,7 +32,7 @@ export function Header({ navbar }) {
                 <nav className={showMenu? "navbar active": 'navbar'}>
                     {
                         navbar.map(el => (
-                            <Link key={el.id} to={el.route} className='Link'>
+                            <Link key={el.id} to={el.route} className='Link'> 
                                 {el.title}
                             </Link>
                         ))
@@ -42,7 +42,7 @@ export function Header({ navbar }) {
             <div className="right">
                     
                     <i className='fa-solid fa-phone'></i>
-                    <a className='infoTel' href='tel:555 6785'>Call Us: 555 6785</a>
+                    <a className='infoTel' href='tel:555 6785'>Call Us: 555 67855</a>
 
                     <span className='separator'> | </span>    
                   
