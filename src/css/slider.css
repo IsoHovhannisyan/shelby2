@@ -1,0 +1,139 @@
+.Slider {
+    width: 100%;
+    height: 100vh;
+}
+
+.Slider .btn-slide.prev {
+    left: 20px;
+}
+
+.Slider .btn-slide.next {
+    right: 20px;
+}
+
+.Slider .slide {
+    background-attachment: fixed;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity linear .8s;
+}
+
+.Slider .slide h3 {
+    width: 65rem;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: black;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.Slider .slide.active {
+    opacity: 1;
+}
+
+.Slider .slide .btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    color: white;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+
+
+
+.Slider .btn-slide {
+    width: 60px;
+    height: 60px;
+    background: none;
+    position: absolute;
+    top: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+}
+.Slider .btn-slide:hover {
+    color: white;
+}
+
+.Slider .container-circle {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Slider .circle {
+    width: 9px;
+    height: 9px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.Slider .circle.active {
+    background: blue;
+}
+
+
+
+@media (max-width: 1050px) {
+    .Slider .slide h3 {
+        font-size: 4rem;
+    } 
+}
+
+@media (max-width: 960px) {
+
+    .Slider .slide h3{
+        width: 70%;
+                margin: 0 auto;
+                font-size: 3rem;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .Slider .slide h3 {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .Slider .slide h3{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        font-size: 1.9rem;
+    }
+    .Slider .btn-slide {
+        display: none;
+    }
+    .Slider .container-circle{
+        bottom: 20px;
+    }
+}

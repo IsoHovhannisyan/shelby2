@@ -1,0 +1,44 @@
+.Tour {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.tourDetail th{
+    padding: .2rem 1rem;
+}
+
+.tourDetail{
+    box-shadow: 0 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .1rem;
+    padding: 1rem;
+    background-color:  rgb(225, 246, 252);
+    border-radius: .5rem;
+}
+
+
+.tourDetail .Left div{
+    margin-top: 2px;
+    border: solid 1px gray;
+    border-radius: .1rem;
+    padding: .1rem .5rem;
+}
+
+
+.tourDetail .Right div{
+    margin-top: 2px;
+    border: solid 1px gray;
+    border-radius: .1rem;
+    padding: .1rem .5rem;
+}
+
+.tourDetail .Head {
+    background-color: rgb(37, 111, 196);
+    color: white;
+    text-align: center;
+}

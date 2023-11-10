@@ -1,0 +1,158 @@
+.ourRatings{
+    background: url(../../public/images/rating.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-top: 80px;
+    padding: 40px;
+    position: relative;
+
+    color: white;
+}
+
+.ourRatings .whiteHeading{
+    color: white;
+}
+
+.ourRatings .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    gap: 1rem;
+    /* width: 100%; */
+}
+
+.ourRatings .container .Ratings{
+    width: 20%;
+}
+
+.ourRatings .container .rating{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.ourRatings .container .title{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ourRatings .container .descr{
+    padding-top: 10px;
+    flex-direction: column;
+    font-size: .8rem; 
+}
+
+/* ////////////////////////    Media //////////////// */
+
+@media (max-width: 1220px) {
+    .ourRatings .container {
+        margin-top: 20px;
+        padding-top: 0;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .ourRatings .container .Ratings {
+        padding-top: 0;
+    }
+
+    .ourRatings .container .Ratings .rating {
+        font-size: 4rem;
+    }
+
+    .ourRatings .container .Ratings .descr {
+        font-size: .8rem;
+    }
+        
+}
+
+/* @media (max-width: 1150px) {
+    .ourRatings {
+       
+    }
+} */
+
+@media (max-width: 910px) {
+    .ourRatings {
+        height: 60vh;
+    }
+    .ourRatings .container {
+        margin-top: 30px;
+        padding-top: 0;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .ourRatings .container .Ratings{
+        padding-top: 0;
+        margin: 5px 0;
+    }
+    .ourRatings .container .Ratings .rating {
+        font-size: 4rem;
+    }
+
+    .ourRatings .container .Ratings .title{
+        font-size: .8rem;
+    }
+    .ourRatings .container .Ratings .descr {
+        font-size: .6rem;
+    }
+}
+
+
+@media (max-width: 570px) {
+    .ourRatings {
+        height: 50vh;
+    }
+
+    .ourRatings .container .Ratings{
+        width: 15%;
+    }
+
+    .ourRatings .container .Ratings .rating {
+        font-size: 2rem;
+        margin-top: -3rem;
+    }
+
+    .ourRatings .container .Ratings .title{
+        font-size: .6rem;
+    }
+
+    .ourRatings .container .Ratings .descr {
+        font-size: .4rem;
+    }
+
+    .ourRatings .container {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .Ratings {
+        height: 160vh;
+
+        .container {
+            div {
+                .rating {
+                    font-size: 4rem;
+                }
+
+                .title {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .Ratings {
+        h2 {
+            font-size: 1rem;
+        }
+    }
+}
+

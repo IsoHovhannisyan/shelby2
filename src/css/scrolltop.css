@@ -1,0 +1,17 @@
+.ScrollTop {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 1000;
+    font-size: 1.6rem;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 8px 15px;
+    color: rgb(147, 197, 253); 
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+}
+
+.ScrollTop:hover {
+    box-shadow: 0 0 20px;
+}

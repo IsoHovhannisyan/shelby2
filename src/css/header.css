@@ -1,0 +1,109 @@
+.Header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    /* background-image: url(../../public/images/header.jpg); */
+    background-color: rgb(215, 242, 251);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(37, 111, 196);
+}
+
+.Header #menu-bar{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: 1s linear;
+}
+
+.Header #menu-bar:hover{
+    color: blue;
+    transition: .5s linear;
+}
+
+.Header .bg-color{
+    background-color: rgb(238, 233, 233);
+
+}
+
+.Header .left{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+} 
+
+.Header .left .logo{
+    width: 2.5rem;
+}
+
+.Header .left .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.Header .left .navbar{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;   
+    transition: .5s linear;
+    padding: .5rem;
+}
+
+.Header .left .navbar .Link:hover{
+    color: blue;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.Header .right{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Header .right a, i, span{
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.Header .right a:hover{
+    color: blue;
+}
+.Header .right i:hover{
+    color: blue;
+}
+.Header .right span:hover{
+    color: blue;
+}
+
+@media(max-width: 979px){
+    .Header{
+        #menu-bar{
+            display: initial;
+        }
+    }
+    .Header .left .navbar{
+        display: flex;
+        gap: .5rem;
+        flex-direction: column;    
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: .5rem;
+        transform: scaleY(0);
+        transition: .5s linear;      
+    }
+    .Header .left .navbar.active{
+    transform: scaleY(1);
+    }
+
+}

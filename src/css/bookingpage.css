@@ -1,0 +1,128 @@
+.booking{
+    padding-top: 10rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+    width: 95%;
+    padding: .3rem;
+    gap: .5rem;
+    background: rgb(218, 240, 247);
+    border-radius: .3rem;
+    position: relative;
+    box-shadow: 0 0 3px;
+}
+
+.search .check-city {
+    background: white;
+    padding: .7rem;
+    position: relative;
+    border-radius: .3rem;
+    color: rgb(37, 111, 196);
+}
+
+.search .check-city:hover{
+    box-shadow: 0 0 2px;
+    transition: .1s;
+}
+
+
+.search .check-date{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 20%;
+    border-radius: .3rem;
+    font-size: .8rem;
+    user-select: none;
+    position: relative;
+    box-sizing: border-box;
+    color: rgb(37, 111, 196);
+}
+
+.search .check-date input[type = 'date']::-webkit-calendar-picker-indicator{
+    opacity: 1;
+    background-color: rgb(93, 161, 239);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: .3rem;
+}
+
+.search .check-date:hover{
+    box-shadow: 0 0 2px;
+    transition: .1s;
+}
+
+.search .check-person{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 30rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(37, 111, 196);
+}
+
+.search .check-person:hover{
+    box-shadow: 0 0 2px;
+    transition: .1s;
+}
+
+.search .check-person .title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.search .check-person .circle{
+    background-color: gray;
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+}
+
+.search .check-person .left{
+ display: flex;   
+}
+
+
+.search .btn{
+    z-index: 2;
+    color: rgb(82, 148, 223);
+}
+
+.search .btn:hover{
+    color: white;
+}
+
+
+.tours {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 3px;
+    background: rgb(242, 251, 254);
+}
+
+th {
+    color: rgb(37, 111, 196);
+}
+
+th, tr, td{
+    border: 1px solid black;
+    padding: .2rem;
+    text-align: center;
+}
+
+.tours .tours_body .btn{
+    font-size: .7rem;
+    padding: .3rem .4rem;
+    border-radius: .5rem;
+    z-index: 2;
+}
