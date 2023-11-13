@@ -23,17 +23,18 @@ export function Header({ navbar }) {
     return (
         <div className={ scrollDown ? 'Header bg-color' : 'Header' }>
 
-            <div className='fa-solid fa-bars' id='menu-bar' onClick={()=>setShowMenu(!showMenu)}></div>
+            <div className='fa-solid fa-bars' id={scrollDown ? 'menu-bar-color': 'menu-bar'} onClick={()=>setShowMenu(!showMenu)}></div>
 
             <div className="left">
                 <div className='logo' onClick={() => navigate('/') } >
-                    <img src='./images/logo.png' alt='logo' />
+                    <Link to='/'><img src='./images/logo.png' alt='logo' /></Link>
                 </div>
                 <nav className={showMenu? "navbar active": 'navbar'}>
                     {
                         navbar.map(el => (
-                            <Link key={el.id} to={el.route} className='Link'> 
+                            <Link key={el.id} to={el.route} className='Link'>
                                 {el.title}
+                                <span className='span'></span> 
                             </Link>
                         ))
                     }

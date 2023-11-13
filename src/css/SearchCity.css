@@ -1,6 +1,4 @@
 
-
-
 .Search{
     padding-left: 5px;
 }
@@ -13,10 +11,11 @@
     border: 1px solid gray;
     position: absolute;
     left: 2.2rem;
-    top: 50%;
+    top: 90%;
     background-color: rgb(242, 250, 253);
     padding: .2rem 1rem;
     color: rgb(74, 73, 73);
+    border-radius: .3rem;
 }
 
 

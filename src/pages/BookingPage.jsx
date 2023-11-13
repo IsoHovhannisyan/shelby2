@@ -11,10 +11,11 @@ import { ChildAge } from '../components/ChildAge';
 import { Tour } from '../components/Tour';
 
 
-export function BookingPage() {
+export function BookingPage({}) {
 
   const [currentLanguage, setCurrentLanguage] = useState('am');
   const [dropDown, setDropDown] = useState(false);
+  const [personDropDown, setPersonDropDown] = useState(false);
   const controlCheckPersonRef = useRef(null);
   const [cities, setCities] = useState([]);
   const [bookingPageLabel, setBookingPageLabel] = useState({});
@@ -26,7 +27,7 @@ export function BookingPage() {
   const [checkout, setCheckout] = useState('');
   const [childrenAge, setChildrenAge] = useState([]);
   const [selectedCity, setSelectedCity] = useState('');
-  const [tableShow, setTableShow] = useState(false);
+  const [tableShow, setTableShow] = useState(true);
   const [result, setResult] = useState({});
 
 
@@ -119,7 +120,7 @@ export function BookingPage() {
 
   return (
     <div className='booking'>
-      <div className='background'></div>
+      <div className='header_background'></div>
       <div className="search">
         <div className="check-city">
           <SearchCity 
@@ -134,7 +135,7 @@ export function BookingPage() {
           <Checkin checkin={checkin} setCheckin={setCheckin}  />
           <Checkout checkout={checkout} setCheckout={setCheckout}/>
         </div>
-        <div className="check-person">
+        <div className="check-person" ref={controlCheckPersonRef} onClick={()=> setDropDown(true)}>
           
           <div className='title'>
             <span>{adults}</span> {bookingPageLabel[0]?.adults}
@@ -151,12 +152,11 @@ export function BookingPage() {
           <div className='title'>
             <span>{children}</span> {bookingPageLabel[0]?.children}
           </div>
-
           <div className={dropDown ? 'controlCheckPerson activeCheckPerson': 'controlCheckPerson'}>
             <div className='left'>
-              <Adults adults={adults} setAdults={setAdults}/>
-              <Rooms rooms={rooms} setRooms={setRooms}/>
-              <Children children={children} setChildren={setChildren}/>
+              <Adults adults={adults} setAdults={setAdults} bookingPageLabel={bookingPageLabel}/>
+              <Rooms rooms={rooms} setRooms={setRooms} bookingPageLabel={bookingPageLabel}/>
+              <Children children={children} setChildren={setChildren} bookingPageLabel={bookingPageLabel}/>
             </div>
 
             {

@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react'
-import '../css/SearchCity.css';
+import '../css/searchcity.css';
 
 export function SearchCity({cities, selectedCity, setSelectedCity,bookingPageLabel}) {
 

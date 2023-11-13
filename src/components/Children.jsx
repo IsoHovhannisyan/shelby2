@@ -1,7 +1,7 @@
-import React from 'react'
+import '../css/children.css';
 import { useState } from 'react';
 
-export function Children({children, setChildren}) {
+export function Children({children, setChildren, bookingPageLabel}) {
   const [cursor, setCursor] = useState('pointer');
 
   const onChangeInput = ()=>{
@@ -16,12 +16,12 @@ export function Children({children, setChildren}) {
   // if(children > 0) setCursor('pointer');
 
   return (
-    <div className='Adults'>
-      <div>children</div>
+    <div className='Children'>
+      <div>{bookingPageLabel[0]?.children}</div>
       <div className='btnNumbers'>
-        <span onClick={onChangeInput} className='prev' style={{cursor}}>-</span>
+        <div onClick={onChangeInput} className='prev'><i class="fa-solid fa-minus" style={{cursor}}></i></div>
         <span>{children}</span>
-        <span onClick={()=> setChildren(+children + 1)} className='next'>+</span>
+        <div onClick={()=> setChildren(+children + 1)} className='next'><i class="fa-solid fa-plus"></i></div>
       </div>
     </div>
   )

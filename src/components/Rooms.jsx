@@ -1,7 +1,8 @@
-import React from 'react'
-import { useState } from 'react';
 
-export function Rooms({rooms, setRooms}) {
+import { useState } from 'react';
+import '../css/rooms.css';
+
+export function Rooms({rooms, setRooms, bookingPageLabel}) {
   const [cursor, setCursor] = useState('pointer');
 
   const onChangeInput = ()=>{
@@ -14,12 +15,12 @@ export function Rooms({rooms, setRooms}) {
   }
 
   return (
-    <div className='Adults'>
-      <div>Rooms</div>
+    <div className='Rooms'>
+      <div>{bookingPageLabel[0]?.rooms}</div>
       <div className='btnNumbers'>
-        <span onClick={onChangeInput} className='prev' style={{cursor}}>-</span>
+        <div onClick={onChangeInput} className='prev'><i class="fa-solid fa-minus" style={{cursor}}></i></div>
         <span>{rooms}</span>
-        <span onClick={()=> setRooms(+rooms + 1)} className='next'>+</span>
+        <div onClick={()=> setRooms(+rooms + 1)} className='next'><i class="fa-solid fa-plus"></i></div>
       </div>
     </div>
   )

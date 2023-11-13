@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import { Slider } from '../components/Slider';
 import { HotTours } from '../components/HotTours';
 import { OurRatings } from '../components/OurRatings';
-// import { DemandedTours } from '../components/DemandedTours';
 import { ScrollTop } from '../components/ScrollTop';
-import axios from '../axios';
 import { MainTours } from '../components/MainTours';
+import { DemandedTours } from '../components/DemandedTours';
+import axios from '../axios';
 
 export function HomePage() {
     const [currentLanguage, setCurrentLanguage] = useState('am');
@@ -14,7 +14,7 @@ export function HomePage() {
     const [hotTours, setHotTours] = useState([]);
     const [ourRatings, setOurRatings] = useState([]);
     const [mainTours, setMainTours] = useState([]);
-    // const [demandedTours, setDemandedTours] = useState([]);
+    const [demandedTours, setDemandedTours] = useState([]);
 
     useEffect(() => {
         loadingData();
@@ -38,8 +38,8 @@ export function HomePage() {
         const mainToursData = await axios.get(`maintour?lang=${currentLanguage}`);
         setMainTours(mainToursData.data);
 
-        // const demandedToursData = await axios.get(`demandedtour?lang=${currentLanguage}`);
-        // setDemandedTours(demandedToursData.data);
+        const demandedToursData = await axios.get(`demandedtour?lang=${currentLanguage}`);
+        setDemandedTours(demandedToursData.data);
     }
 
     return (
@@ -48,7 +48,7 @@ export function HomePage() {
             <HotTours hotTours={hotTours} homePageLabel={homePageLabel} />
             <OurRatings ourRatings={ourRatings} homePageLabel={homePageLabel} />
             <MainTours mainTours={mainTours} homePageLabel={homePageLabel}/>
-            {/* <DemandedTours demandedTours={demandedTours} />  */}
+            <DemandedTours demandedTours={demandedTours} /> 
             <ScrollTop /> 
         </div>
     )

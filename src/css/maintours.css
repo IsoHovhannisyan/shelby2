@@ -1,6 +1,80 @@
-.mainTours .container{
+.MainTours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainTours .container {
     display: grid;
     gap: 1rem;
     padding: 0 60px;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.MainTours .container .item {
+    position: relative;
+    overflow: hidden;
+}
+
+.MainTours .container .item img {
+    transition: all .2s linear;
+    width: 100%;
+    height: 100%;
+}
+
+.MainTours .container .item:hover img {
+    transition: all .2s linear;
+    transform: scale(1.1);
+}
+
+.MainTours .container .item .content {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 30%;
+    text-align: center;
+}
+
+.MainTours .container .item:hover .content {
+    transition: all .2s linear;
+    opacity: 1;
+}
+
+.MainTours .container .item .content h3{
+    font-size: 1.4rem;
+}
+.MainTours .container .item .content  p {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 850px) {
+    .MainTours .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .MainTours .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .MainTours .container {
+        padding: 0 30px;
+    }
+    .MainTours .container .item .content h3 {
+        font-size: 1rem;
+    }
+
+    .MainTours .container .item .content p {
+        padding: 10px;
+        font-size: .9rem;
+    }
 }

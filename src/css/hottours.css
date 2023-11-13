@@ -1,24 +1,38 @@
-
-.hotTours {
+.HotTours{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.hotTours .container{
-    padding: 1rem 60px;
+
+.HotTours .container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 0 60px;
+} 
+
+.HotTours .container .tour {
     text-align: center;
-}
 
-.hotTours .container .tour{
-    height: 500px;
 }
-
-.hotTours .container .img{
+.HotTours .container .tour .img {
     width: 100%;
 }
 
+.HotTours .container .tour .title {
+    margin: 20px 0;
+}
+
+.HotTours .container .tour .descr {
+    line-height: 20px;
+    font-size: .9rem;
+}
+
+@media (max-width: 1060px) {
+    .HotTours .container {
+        padding: 0 30px;
+        flex-wrap: wrap;
+    }
+}
 

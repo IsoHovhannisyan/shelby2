@@ -29,7 +29,7 @@
 }
 
 .Slider .slide h3 {
-    width: 65rem;
+    width: 90%;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -101,7 +101,7 @@
 
 @media (max-width: 1050px) {
     .Slider .slide h3 {
-        font-size: 4rem;
+        font-size: 2rem;
     } 
 }
 

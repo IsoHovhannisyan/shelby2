@@ -1,0 +1,51 @@
+.Footer{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 4rem;
+    background-color: black;
+    color: white;
+}
+
+.Footer .info{
+    display: flex;
+    gap: 2rem;
+}
+
+.Footer div{
+    flex: 1;
+}
+
+.Footer .support{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.Footer .support p{
+    padding: .5rem;
+}
+
+.Footer .links{
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer a{
+    color: white;
+    margin-top: .5rem;
+    font-weight: bold;
+}
+.Footer a:hover{
+    color: rgb(37, 111, 196);
+    
+}
+
+@media(max-width: 1060px){
+    .Footer{
+        display: flex;
+        flex-direction: column;
+        padding: 5rem;
+    }
+
+}

@@ -1,0 +1,36 @@
+.Adults{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Adults div{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Adults .btnNumbers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+}
+
+.Adults .btnNumbers .prev{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Adults .btnNumbers span{
+    font-size: 1.3rem;
+}
+
+.Adults .btnNumbers .next{
+    font-size: 1rem;
+    font-weight: bold;
+}

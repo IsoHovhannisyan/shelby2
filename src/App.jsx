@@ -16,12 +16,12 @@ export  function App() {
   
 
   useEffect(() => {
-    // if (!localStorage.getItem('shelby-Language')) {
-    //   localStorage.setItem('shelby-Language', 'en');
-    // }
+    if (!localStorage.getItem('shelby-Language')) {
+      localStorage.setItem('shelby-Language', 'en');
+    }
     
     loadingData();
-    // setCurrentLanguage(localStorage.getItem('shelby-Language'));
+    setCurrentLanguage(localStorage.getItem('shelby-Language'));
   }, [currentLanguage])
 
   async function loadingData() {
@@ -38,7 +38,7 @@ export  function App() {
         <main>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/booking' element={<BookingPage />} />
+          <Route path='/booking' element={<BookingPage/>} />
           <Route path='/booking/:id' element={<TourDetailPage />} />
           <Route path='/about' element={<AboutPage/>} />
           <Route path='*' element={<Navigate to='/' />} />

@@ -3,7 +3,7 @@
     width: 100%;
     z-index: 1000;
     /* background-image: url(../../public/images/header.jpg); */
-    background-color: rgb(215, 242, 251);
+    background-color: rgba(191, 236, 251, 0);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    color: rgb(37, 111, 196);
+    color: white;
 }
 
 .Header #menu-bar{
@@ -19,17 +19,43 @@
     color: white;
     cursor: pointer;
     display: none;
-    transition: 1s linear;
+    transition: .2s linear;
+}
+
+.Header #menu-bar-color{
+    font-size: 2rem;
+    color: rgb(30, 57, 89);
+    cursor: pointer;
+    display: none;
+    transition: .2s linear;
+}
+
+.Header #menu-bar-color:hover{
+
 }
 
 .Header #menu-bar:hover{
-    color: blue;
-    transition: .5s linear;
+    color: rgb(37, 111, 196);
+    transition: .2s linear;
 }
 
-.Header .bg-color{
-    background-color: rgb(238, 233, 233);
+.Header.bg-color{
+    background-color: white;
+    color: rgb(30, 57, 89);
+}
 
+.Header.bg-color .Link .span{
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(37, 111, 196);
+    z-index: -1;
+}
+.Header.bg-color .Link:hover .span{
+    width: 100%;
+    transition: .5s;
 }
 
 .Header .left{
@@ -52,14 +78,18 @@
     gap: 1.5rem;
     font-size: 1rem;
     font-weight: bold;   
-    transition: .5s linear;
     padding: .5rem;
 }
 
+.Header .left .navbar .Link{
+    position: relative;
+    transition: .2s;
+}
+
 .Header .left .navbar .Link:hover{
-    color: blue;
     cursor: pointer;
-    transition: .5s linear;
+    transition: .2s;
+    color: rgb(37, 111, 196);
 }
 
 .Header .right{
@@ -68,27 +98,33 @@
     gap: 2rem;
 }
 
-.Header .right a, i, span{
+.Header .right a, i{
     font-weight: bold;
     cursor: pointer;
+    transition: .2s;
 
+}
+
+.Header .right span{
+    font-weight: 700;
 }
 
 .Header .right a:hover{
-    color: blue;
+    color: rgb(37, 111, 196);
+    transition: .2s;
 }
+
 .Header .right i:hover{
-    color: blue;
-}
-.Header .right span:hover{
-    color: blue;
+    color: rgb(37, 111, 196);
+    transition: .2s;
 }
 
 @media(max-width: 979px){
-    .Header{
-        #menu-bar{
-            display: initial;
-        }
+    .Header #menu-bar{
+        display: initial;
+    }
+    .Header #menu-bar-color{
+        display: initial;
     }
     .Header .left .navbar{
         display: flex;

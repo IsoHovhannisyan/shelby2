@@ -13,6 +13,7 @@ export default function TourDetailPage() {
 
     
     useEffect(()=> {
+        window.scroll(0,0)
         loadingTour();
     },[])
 
@@ -24,6 +25,7 @@ export default function TourDetailPage() {
   return (
 
     <div>
+    <div className='header_background'></div>
     <div className='Tour'>
     <button className=' btn z-0  ' onClick={()=> navigate(-1)}><span></span>Go Back</button>
         <div className='tourDetail'>

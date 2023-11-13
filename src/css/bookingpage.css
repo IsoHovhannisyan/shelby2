@@ -1,18 +1,21 @@
 .booking{
     padding-top: 10rem;
+    height: 100vh;
 }
 
 .search {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 3rem auto;
-    width: 95%;
+    width: 100%;
     padding: .3rem;
     gap: .5rem;
-    background: rgb(218, 240, 247);
+    /* background: rgb(30, 57, 89); */
     border-radius: .3rem;
     position: relative;
-    box-shadow: 0 0 3px;
+    box-shadow: 0 0 10px;
 }
 
 .search .check-city {
@@ -20,7 +23,8 @@
     padding: .7rem;
     position: relative;
     border-radius: .3rem;
-    color: rgb(37, 111, 196);
+    color: rgb(3, 98, 207);
+    height: 3rem;
 }
 
 .search .check-city:hover{
@@ -42,6 +46,8 @@
     position: relative;
     box-sizing: border-box;
     color: rgb(37, 111, 196);
+    padding: .7rem;
+    height: 3rem;
 }
 
 .search .check-date input[type = 'date']::-webkit-calendar-picker-indicator{
@@ -58,6 +64,7 @@
 }
 
 .search .check-person{
+    position: relative;
     background: white;
     display: flex;
     justify-content: center;
@@ -68,6 +75,7 @@
     cursor: pointer;
     user-select: none;
     color: rgb(37, 111, 196);
+    height: 3rem;
 }
 
 .search .check-person:hover{
@@ -88,41 +96,92 @@
     border-radius: 50%;
 }
 
-.search .check-person .left{
- display: flex;   
+.search .check-person .controlCheckPerson{
+    display: none;
+    position: absolute;
+    top: 100%;
+    border: 1px solid black;
 }
 
+.search .check-person .controlCheckPerson.activeCheckPerson{
+    display: inherit;
+}
+
+
+.search .check-person .controlCheckPerson.activeCheckPerson .left{
+  width: 22.59rem;
+  padding: 1rem;  
+  background-color: white;
+  position: relative;
+}
+
+.search .check-person .controlCheckPerson.activeCheckPerson .childage-container{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 101%;
+    left: 0;
+}
 
 .search .btn{
     z-index: 2;
-    color: rgb(82, 148, 223);
+    color: white;
+    border-color: white;
+}
+.search .btn span{
+    background-color: white;
 }
 
 .search .btn:hover{
-    color: white;
+    color: rgb(37, 111, 196);
 }
+
+
 
 
 .tours {
     display: flex;
     justify-content: center;
     box-shadow: 0 0 3px;
-    background: rgb(242, 251, 254);
+    /* background: rgb(30, 57, 89); */
 }
 
 th {
     color: rgb(37, 111, 196);
+    padding: 1rem .5rem;
+    border: 3px solid rgb(52, 90, 133);
 }
 
-th, tr, td{
-    border: 1px solid black;
+tr, td{
+    border: 3px solid rgb(30, 57, 89);
     padding: .2rem;
     text-align: center;
+    color: rgb(37, 111, 196);
+    box-shadow: 0 0 2px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
 }
 
 .tours .tours_body .btn{
-    font-size: .7rem;
-    padding: .3rem .4rem;
-    border-radius: .5rem;
+    font-size: .8rem;
+    padding: .3rem .7rem;
+    border-radius: 1rem;
     z-index: 2;
+    color: rgb(37, 111, 196);
+    border-color: rgb(37, 111, 196);
+    font-weight: bold;
+}
+
+.tours .tours_body .btn span{
+    background-color: rgb(37, 111, 196);
+}
+
+.tours .tours_body .btn:hover{
+    color: white;
+}
+
+@media (max-width: 1150px){
+    .search .check-date{
+        font-size: .6rem;
+    }
 }

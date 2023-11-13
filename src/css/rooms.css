@@ -1,0 +1,37 @@
+.Rooms{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.Rooms div{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Rooms .btnNumbers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+}
+
+.Rooms .btnNumbers .prev{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Rooms .btnNumbers span{
+    font-size: 1.3rem;
+}
+
+.Rooms .btnNumbers .next{
+    font-size: 1rem;
+    font-weight: bold;
+}

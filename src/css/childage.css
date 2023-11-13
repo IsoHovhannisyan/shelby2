@@ -1,0 +1,11 @@
+.childeAge{
+    padding: .5rem;
+    font-weight: 500;
+    background-color: rgb(93, 161, 239);
+    color: white;
+    border-radius: .3rem;
+}
+
+.disabled{
+    color: white;
+}
