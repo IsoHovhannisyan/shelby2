@@ -5,6 +5,7 @@ import '../css/slider.css';
 
 export function Slider({ sliders }) {
     const [currentSlide, setCurrentSlides] = useState(1);
+    const animation = ['rollIn','flipInY', 'rotateIn']; // flipInY
     const [visible, setVisible] = useState(true);
 
 
@@ -46,6 +47,7 @@ export function Slider({ sliders }) {
     const titleAnimations = () => {
         setVisible(false);
         setTimeout(() => setVisible(true), 1000);
+        setVisible(false);
     }
 
     return (
@@ -58,10 +60,10 @@ export function Slider({ sliders }) {
                             style={{ backgroundImage: `url('https://shelby-backend-services.vercel.app/${slider.image}')` }}
                             className={currentSlide === (index + 1) ? 'slide active' : 'slide'}
                         >
-                            <Animated animationIn='fadeIn' animationOut='' isVisible={visible}>
+                            <Animated animationIn={animation[index]} animationOut="fadeOut" isVisible={visible}>
                                 <h3>{slider.title}</h3>
-                                <Link to='/booking' className='btn'><span></span>{slider.btn_text}</Link>
                             </Animated>
+                            <Link to='/booking' className='btn'><span></span>{slider.btn_text}</Link>
                         </div>
                     )
                 })
