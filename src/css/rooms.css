@@ -35,3 +35,51 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+@media (max-width: 1040px){
+    .Rooms div{
+        font-size: .9rem;
+    }
+    .Rooms .btnNumbers span{
+        font-size: 1.1rem;
+    }
+    .Rooms .btnNumbers .prev{
+        font-size: .9rem;
+    }
+    .Rooms .btnNumbers .next{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 950px){
+    .Rooms div{
+        font-size: .7rem;
+    }
+    .Rooms .btnNumbers span{
+        font-size: .9rem;
+    }
+    .Rooms .btnNumbers .prev{
+        font-size: .7rem;
+    }
+    .Rooms .btnNumbers .next{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 730px){
+    .Rooms div{
+        font-size: .6rem;
+    }
+    .Rooms .btnNumbers{
+        padding: .1rem .3rem;
+    }
+    .Rooms .btnNumbers span{
+        font-size: .7rem;
+    }
+    .Rooms .btnNumbers .prev{
+        font-size: .5rem;
+    }
+    .Rooms .btnNumbers .next{
+        font-size: .5rem;
+    }
+}

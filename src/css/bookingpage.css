@@ -70,7 +70,7 @@
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    width: 30rem;
+    width: 30%;
     border-radius: .3rem;
     cursor: pointer;
     user-select: none;
@@ -89,7 +89,7 @@
 }
 
 .search .check-person .circle{
-    background-color: gray;
+    background-color: rgb(37, 111, 196);
     display: inline-block;
     width: .4rem;
     height: .4rem;
@@ -99,20 +99,21 @@
 .search .check-person .controlCheckPerson{
     display: none;
     position: absolute;
-    top: 100%;
-    border: 1px solid black;
+    top: 105%;
 }
 
 .search .check-person .controlCheckPerson.activeCheckPerson{
-    display: inherit;
+    display: initial;
 }
 
 
 .search .check-person .controlCheckPerson.activeCheckPerson .left{
-  width: 22.59rem;
+  width: 19rem;
   padding: 1rem;  
   background-color: white;
   position: relative;
+  border: 1px solid black;
+  border-radius: .5rem;
 }
 
 .search .check-person .controlCheckPerson.activeCheckPerson .childage-container{
@@ -143,7 +144,6 @@
     display: flex;
     justify-content: center;
     box-shadow: 0 0 3px;
-    /* background: rgb(30, 57, 89); */
 }
 
 th {
@@ -182,6 +182,84 @@ tr, td{
 
 @media (max-width: 1150px){
     .search .check-date{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 1040px){
+    .search .check-city{
+        width: 90%;
+    }
+
+    .search .check-date{
+        width: 30%;
+    }
+
+    .search .check-person .title{
+        font-size: .9rem;
+    }
+
+    .search .check-person .controlCheckPerson.activeCheckPerson .left{
+        width: 18rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .search .check-person .title{
+        font-size: .7rem;
+    }
+    .search .check-person .controlCheckPerson.activeCheckPerson .left{
+        width: 15rem;
+    }
+    .tours{
+        font-size: .9rem;
+    }
+    .search .btn{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 730px){
+
+    .search .check-date{
+        font-size: .55rem;
+        width: 44%;
+    }
+    .search .check-person{
+        width: 44%;
+    }
+    .search .check-person .title{
         font-size: .6rem;
+    }
+    .search .check-person .controlCheckPerson.activeCheckPerson .left{
+        width: 13rem;
+        z-index: 10;
+    }
+    .tours{
+        font-size: .7rem;
+    }
+    .search .btn{
+        font-size: .8rem;
+    }
+    .tours .tours_body .btn{
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 630px){
+    .search .check-date{
+        width: 44%;
+    }
+    .search .check-person{
+        width: 44%;
+    }
+    .search .btn{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 540px){
+    .tours{
+        font-size: .5rem;
     }
 }

@@ -11,11 +11,10 @@ import { ChildAge } from '../components/ChildAge';
 import { Tour } from '../components/Tour';
 
 
-export function BookingPage({}) {
+export function BookingPage({currentLanguage}) {
 
-  const [currentLanguage, setCurrentLanguage] = useState('am');
+
   const [dropDown, setDropDown] = useState(false);
-  const [personDropDown, setPersonDropDown] = useState(false);
   const controlCheckPersonRef = useRef(null);
   const [cities, setCities] = useState([]);
   const [bookingPageLabel, setBookingPageLabel] = useState({});
@@ -27,8 +26,13 @@ export function BookingPage({}) {
   const [checkout, setCheckout] = useState('');
   const [childrenAge, setChildrenAge] = useState([]);
   const [selectedCity, setSelectedCity] = useState('');
-  const [tableShow, setTableShow] = useState(true);
+  const [tableShow, setTableShow] = useState(false);
   const [result, setResult] = useState({});
+
+
+
+
+  
 
 
   useEffect(()=> {
@@ -77,7 +81,7 @@ export function BookingPage({}) {
 
   const submitSearchPackages = async()=>{
     if(!selectedCity || !checkin || !checkout) {
-      return alert('bolory petq e lracac linen');
+      return alert('Все поля обязательны.');
     }
 
     const childageArr = document.querySelectorAll('.childage-container .cildeAge');
@@ -144,7 +148,7 @@ export function BookingPage({}) {
           <div className='circle'></div>
 
           <div className='title'>
-            <span>{rooms}</span>{bookingPageLabel[0]?.rooms}
+            <span>{rooms}</span> {bookingPageLabel[0]?.rooms}
           </div>
 
           <div className='circle'></div>

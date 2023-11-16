@@ -16,6 +16,7 @@
     padding: .2rem 1rem;
     color: rgb(74, 73, 73);
     border-radius: .3rem;
+    z-index: 100;
 }
 
 

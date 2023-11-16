@@ -3,7 +3,7 @@ import { useParams, useSearchParams, useNavigate } from 'react-router-dom'
 import axios from '../axios';
 import '../css/tourdetail.css'
 
-export default function TourDetailPage() {
+export default function TourDetailPage({currentLanguage}) {
 
     const [tour, setTour] = useState({});
     const {id} = useParams();

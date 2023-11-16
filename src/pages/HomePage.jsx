@@ -7,8 +7,7 @@ import { MainTours } from '../components/MainTours';
 import { DemandedTours } from '../components/DemandedTours';
 import axios from '../axios';
 
-export function HomePage() {
-    const [currentLanguage, setCurrentLanguage] = useState('am');
+export function HomePage({currentLanguage}) {
     const [homePageLabel, setHomePageLabel] = useState({});
     const [slider, setSlider] = useState([]);
     const [hotTours, setHotTours] = useState([]);
@@ -19,7 +18,7 @@ export function HomePage() {
     useEffect(() => {
         loadingData();
         window.scrollTo(0, 0);
-        setCurrentLanguage(localStorage.getItem('shelby-Language'));
+        // setCurrentLanguage(localStorage.getItem('shelby-Language'));
     }, [currentLanguage])
 
     async function loadingData() {

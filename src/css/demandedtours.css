@@ -23,6 +23,8 @@
 
 .DemandedTours .item  .content h2 {
     color: rgb(37, 111, 196);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .DemandedTours .item  .content p {

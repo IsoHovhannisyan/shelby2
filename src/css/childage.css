@@ -3,9 +3,30 @@
     font-weight: 500;
     background-color: rgb(93, 161, 239);
     color: white;
+    font-size: .79rem;
     border-radius: .3rem;
 }
 
 .disabled{
     color: white;
+}
+
+@media (max-width: 1040px){
+    .childeAge{
+        font-size: .73rem;
+    }
+}
+
+@media (max-width: 950px){
+    .childeAge{
+        font-size: .59rem;
+        padding: .4rem;
+    }
+}
+
+@media (max-width: 730px){
+    .childeAge{
+        font-size: .5rem;
+        padding: .3rem;
+    }
 }

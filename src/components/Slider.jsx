@@ -47,7 +47,6 @@ export function Slider({ sliders }) {
     const titleAnimations = () => {
         setVisible(false);
         setTimeout(() => setVisible(true), 1000);
-        setVisible(false);
     }
 
     return (
@@ -59,10 +58,12 @@ export function Slider({ sliders }) {
                             key={slider.id}
                             style={{ backgroundImage: `url('https://shelby-backend-services.vercel.app/${slider.image}')` }}
                             className={currentSlide === (index + 1) ? 'slide active' : 'slide'}
-                        >
+                        >   
+                        <div className='background'>
                             <Animated animationIn={animation[index]} animationOut="fadeOut" isVisible={visible}>
-                                <h3>{slider.title}</h3>
+                                <h3 className='h3'>{slider.title}</h3>
                             </Animated>
+                        </div>
                             <Link to='/booking' className='btn'><span></span>{slider.btn_text}</Link>
                         </div>
                     )

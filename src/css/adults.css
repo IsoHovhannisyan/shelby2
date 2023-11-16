@@ -7,7 +7,6 @@
 
 .Adults div{
     font-size: 1rem;
-    text-transform: uppercase;
     font-weight: 500;
 }
 
@@ -33,4 +32,52 @@
 .Adults .btnNumbers .next{
     font-size: 1rem;
     font-weight: bold;
+}
+
+@media (max-width: 1040px){
+    .Adults div{
+        font-size: .9rem;
+    }
+    .Adults .btnNumbers span{
+        font-size: 1.1rem;
+    }
+    .Adults .btnNumbers .prev{
+        font-size: .9rem;
+    }
+    .Adults .btnNumbers .next{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 950px){
+    .Adults div{
+        font-size: .7rem;
+    }
+    .Adults .btnNumbers span{
+        font-size: .9rem;
+    }
+    .Adults .btnNumbers .prev{
+        font-size: .7rem;
+    }
+    .Adults .btnNumbers .next{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 730px){
+    .Adults div{
+        font-size: .6rem;
+    }
+    .Adults .btnNumbers{
+        padding: .1rem .3rem;
+    }
+    .Adults .btnNumbers span{
+        font-size: .7rem;
+    }
+    .Adults .btnNumbers .prev{
+        font-size: .5rem;
+    }
+    .Adults .btnNumbers .next{
+        font-size: .5rem;
+    }
 }

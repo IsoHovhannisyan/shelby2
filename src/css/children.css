@@ -35,3 +35,51 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+@media (max-width: 1040px){
+    .Children div{
+        font-size: .9rem;
+    }
+    .Children .btnNumbers span{
+        font-size: 1.1rem;
+    }
+    .Children .btnNumbers .prev{
+        font-size: .9rem;
+    }
+    .Children .btnNumbers .next{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 950px){
+    .Children div{
+        font-size: .7rem;
+    }
+    .Children .btnNumbers span{
+        font-size: .9rem;
+    }
+    .Children .btnNumbers .prev{
+        font-size: .7rem;
+    }
+    .Children .btnNumbers .next{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 730px){
+    .Children div{
+        font-size: .6rem;
+    }
+    .Children .btnNumbers{
+        padding: .1rem .3rem;
+    }
+    .Children .btnNumbers span{
+        font-size: .7rem;
+    }
+    .Children .btnNumbers .prev{
+        font-size: .5rem;
+    }
+    .Children .btnNumbers .next{
+        font-size: .5rem;
+    }
+}

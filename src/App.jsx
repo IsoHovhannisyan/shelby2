@@ -10,18 +10,18 @@ import { AboutPage } from './pages/AboutPage'
 
 export  function App() {
 
-  const [currentLanguage, setCurrentLanguage] = useState('am');
+  const [currentLanguage, setCurrentLanguage] = useState('en');
   const [navbar, setNavbar] = useState([]);
   const [footer, setFooter] = useState([]);
   
 
   useEffect(() => {
-    if (!localStorage.getItem('shelby-Language')) {
-      localStorage.setItem('shelby-Language', 'en');
-    }
+    // if (!localStorage.getItem('shelby-Language')) {
+    //   localStorage.setItem('shelby-Language', 'en');
+    // }
     
     loadingData();
-    setCurrentLanguage(localStorage.getItem('shelby-Language'));
+    // setCurrentLanguage(localStorage.getItem('shelby-Language'));
   }, [currentLanguage])
 
   async function loadingData() {
@@ -33,19 +33,24 @@ export  function App() {
 
   return (
     <div className='App'>
-      <Header navbar={navbar}/>
+      <select onChange={(e) => setCurrentLanguage(e.target.value)} className='SelectLanguage'>
+            <option value="en">en</option>
+            <option value="am">am</option>
+            <option value="ru">ru</option>
+        </select>
+      <Header navbar={navbar} currentLanguage={currentLanguage}/>
 
         <main>
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/booking' element={<BookingPage/>} />
-          <Route path='/booking/:id' element={<TourDetailPage />} />
-          <Route path='/about' element={<AboutPage/>} />
+          <Route path='/' element={<HomePage currentLanguage={currentLanguage}/>} />
+          <Route path='/booking' element={<BookingPage currentLanguage={currentLanguage}/>} />
+          <Route path='/booking/:id' element={<TourDetailPage currentLanguage={currentLanguage}/>} />
+          <Route path='/about' element={<AboutPage currentLanguage={currentLanguage}/>}  />
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>
       </main>
 
-      <Footer footer={footer}/>
+      <Footer footer={footer} currentLanguage={currentLanguage}/>
     </div>
   )
 }
