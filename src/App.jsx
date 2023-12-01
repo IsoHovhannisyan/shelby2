@@ -10,18 +10,13 @@ import { AboutPage } from './pages/AboutPage'
 
 export  function App() {
 
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const currentLanguage = localStorage.getItem('shelby-Language') || 'en';
   const [navbar, setNavbar] = useState([]);
   const [footer, setFooter] = useState([]);
   
 
   useEffect(() => {
-    // if (!localStorage.getItem('shelby-Language')) {
-    //   localStorage.setItem('shelby-Language', 'en');
-    // }
-    
     loadingData();
-    // setCurrentLanguage(localStorage.getItem('shelby-Language'));
   }, [currentLanguage])
 
   async function loadingData() {
@@ -33,11 +28,6 @@ export  function App() {
 
   return (
     <div className='App'>
-      <select onChange={(e) => setCurrentLanguage(e.target.value)} className='SelectLanguage'>
-            <option value="en">en</option>
-            <option value="am">am</option>
-            <option value="ru">ru</option>
-        </select>
       <Header navbar={navbar} currentLanguage={currentLanguage}/>
 
         <main>

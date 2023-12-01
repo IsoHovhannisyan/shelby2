@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NavLink as Link, useNavigate } from 'react-router-dom';
+import {SelectLanguage} from '../components/SelectLanguage';
 import '../css/header.css';
 
 export function Header({ navbar }) {
@@ -54,6 +55,12 @@ export function Header({ navbar }) {
                     <a href="https://www.pinterest.com/" target='_blank' rel='noreferrer'>
                         <i className='fa-brands fa-pinterest'></i>
                     </a>
+
+                    <div>
+                        <SelectLanguage />
+                    </div>
+                    
+                    
             </div>
         </div>
     )

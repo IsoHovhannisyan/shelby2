@@ -3,17 +3,23 @@
     font-weight: 500;
     background-color: rgb(93, 161, 239);
     color: white;
-    font-size: .79rem;
+    font-size: .63rem;
     border-radius: .3rem;
+    margin-bottom: .3rem;
+    max-height: 100px;
+    overflow: auto;
+    
 }
 
 .disabled{
     color: white;
 }
 
-@media (max-width: 1040px){
+
+@media (max-width: 1200px){
     .childeAge{
-        font-size: .73rem;
+        width: 100%;
+        font-size: .9rem;
     }
 }
 

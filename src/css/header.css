@@ -2,7 +2,6 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    /* background-image: url(../../public/images/header.jpg); */
     background-color: rgba(191, 236, 251, 0);
     background-position: center;
     background-repeat: no-repeat;
@@ -28,10 +27,6 @@
     cursor: pointer;
     display: none;
     transition: .2s linear;
-}
-
-.Header #menu-bar-color:hover{
-
 }
 
 .Header #menu-bar:hover{
@@ -95,6 +90,7 @@
 .Header .right{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -118,6 +114,50 @@
     color: rgb(37, 111, 196);
     transition: .2s;
 }
+
+.SelectLanguage {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 2px 6px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    background-color: rgb(37, 111, 196);
+}
+
+.SelectLanguage .selectedLanguage {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.SelectLanguage i {
+    margin-left: 5px;
+}
+
+.SelectLanguage .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(37, 111, 196);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.SelectLanguage .dropdown .selectedLanguage {
+    padding: 3px 0;
+}
+
+.SelectLanguage .dropdown .selectedLanguage:hover {
+    background: white;
+    color: rgb(37, 111, 196);
+}
+
+.SelectLanguage .dropdown.activeSelectLang {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 
 @media(max-width: 979px){
     .Header #menu-bar{

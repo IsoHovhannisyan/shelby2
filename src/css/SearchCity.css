@@ -17,6 +17,8 @@
     color: rgb(74, 73, 73);
     border-radius: .3rem;
     z-index: 100;
+    max-height: 200px;
+    overflow: auto;
 }
 
 

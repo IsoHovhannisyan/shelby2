@@ -106,23 +106,25 @@
     display: initial;
 }
 
-
-.search .check-person .controlCheckPerson.activeCheckPerson .left{
-  width: 19rem;
-  padding: 1rem;  
-  background-color: white;
-  position: relative;
-  border: 1px solid black;
-  border-radius: .5rem;
+.search .check-person .controlCheckPerson.activeCheckPerson .dropDown{
+    width: 19rem;
+    padding: 1rem;  
+    background-color: white;
+    position: relative;
+    border: 1px solid black;
+    border-radius: .5rem;
+    max-height: 300px;
 }
 
-.search .check-person .controlCheckPerson.activeCheckPerson .childage-container{
-    position: absolute;
-    display: flex;
+.search .check-person .controlCheckPerson.activeCheckPerson .dropDown .childage-container{
+    scrollbar-gutter: stable;
+    margin-top: .5rem;
+    width: 100%;
     flex-wrap: wrap;
-    top: 101%;
-    left: 0;
+    overflow: auto;
+    max-height: 80px;
 }
+
 
 .search .btn{
     z-index: 2;
@@ -181,6 +183,15 @@ tr, td{
 }
 
 @media (max-width: 1150px){
+    .search .check-person .controlCheckPerson.activeCheckPerson .dropDown .childage-container .ChildeAge{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 1150px){
     .search .check-date{
         font-size: .7rem;
     }
@@ -199,7 +210,7 @@ tr, td{
         font-size: .9rem;
     }
 
-    .search .check-person .controlCheckPerson.activeCheckPerson .left{
+    .search .check-person .controlCheckPerson.activeCheckPerson .dropDown{
         width: 18rem;
     }
 }
@@ -208,7 +219,7 @@ tr, td{
     .search .check-person .title{
         font-size: .7rem;
     }
-    .search .check-person .controlCheckPerson.activeCheckPerson .left{
+    .search .check-person .controlCheckPerson.activeCheckPerson .dropDown{
         width: 15rem;
     }
     .tours{
@@ -231,7 +242,7 @@ tr, td{
     .search .check-person .title{
         font-size: .6rem;
     }
-    .search .check-person .controlCheckPerson.activeCheckPerson .left{
+    .search .check-person .controlCheckPerson.activeCheckPerson .dropDown{
         width: 13rem;
         z-index: 10;
     }

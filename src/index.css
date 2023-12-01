@@ -64,13 +64,3 @@
     background-repeat: no-repeat;
     z-index: -1;
 }
-
-/* //////////////////////////////// Language //////////////*/
-
-.SelectLanguage{
-    color: blue;
-    position: fixed;
-    right: 1rem;
-    top: 4rem;
-    z-index: 10000;
-}

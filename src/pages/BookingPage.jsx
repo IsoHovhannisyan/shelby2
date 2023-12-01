@@ -157,17 +157,22 @@ export function BookingPage({currentLanguage}) {
             <span>{children}</span> {bookingPageLabel[0]?.children}
           </div>
           <div className={dropDown ? 'controlCheckPerson activeCheckPerson': 'controlCheckPerson'}>
-            <div className='left'>
-              <Adults adults={adults} setAdults={setAdults} bookingPageLabel={bookingPageLabel}/>
-              <Rooms rooms={rooms} setRooms={setRooms} bookingPageLabel={bookingPageLabel}/>
-              <Children children={children} setChildren={setChildren} bookingPageLabel={bookingPageLabel}/>
-            </div>
-
-            {
-              children > 0 && <div className='childage-container'>
-                {childrenAge.map((_,index)=> <ChildAge key={index} bookingPageLabel={bookingPageLabel} />)}
+            <div className='dropDown block bg-white'>
+              <div className='left'>
+                <Adults adults={adults} setAdults={setAdults} bookingPageLabel={bookingPageLabel}/>
+                <Rooms rooms={rooms} setRooms={setRooms} bookingPageLabel={bookingPageLabel}/>
+                <Children children={children} setChildren={setChildren} bookingPageLabel={bookingPageLabel}/>
               </div>
-            }
+              <div className='childage-container'>
+                {
+                  children > 0 && <div className='ChildeAge flex justify-between flex-wrap'>
+                    {childrenAge.map((_,index)=> <ChildAge key={index} bookingPageLabel={bookingPageLabel} />)}
+                  </div>
+                }
+              </div>
+            </div>
+              
+            
           </div>
 
         </div>
