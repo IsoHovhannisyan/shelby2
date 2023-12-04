@@ -28,7 +28,7 @@ export  function App() {
 
   return (
     <div className='App'>
-      <Header navbar={navbar} currentLanguage={currentLanguage}/>
+      <Header navbar={navbar} currentLanguage={currentLanguage} />
 
         <main>
         <Routes>

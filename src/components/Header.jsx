@@ -3,7 +3,7 @@ import { NavLink as Link, useNavigate } from 'react-router-dom';
 import {SelectLanguage} from '../components/SelectLanguage';
 import '../css/header.css';
 
-export function Header({ navbar }) {
+export function Header({ navbar, currentLanguage }) {
   
     const navigate = useNavigate();
     const [scrollDown, setScrollDown] = useState(false);
@@ -57,7 +57,7 @@ export function Header({ navbar }) {
                     </a>
 
                     <div>
-                        <SelectLanguage />
+                        <SelectLanguage currentLanguage={currentLanguage} />
                     </div>
                     
                     

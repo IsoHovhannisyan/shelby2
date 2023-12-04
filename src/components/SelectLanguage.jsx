@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
-export function SelectLanguage() {
-    const currentLanguage = localStorage.getItem('shelby-Language');
+export function SelectLanguage({currentLanguage}) {
     const [showSelector, setShowSelector] = useState(false);
 
     const onChangeSelect = (e) => {
